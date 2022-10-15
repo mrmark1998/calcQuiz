@@ -1,5 +1,5 @@
 body {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 @media only screen and (max-width: 768px) {
@@ -62,10 +62,12 @@ body {
 
 .choice-prefix {
     padding: 2rem 2.5rem;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .choice-text {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
     padding: 2rem;
     width: 100%;
 }

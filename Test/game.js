@@ -25,18 +25,32 @@ var div = document.getElementById('question');
 //shuffle function to shuffle the correct answers into the incorrect
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
-  
     while (currentIndex != 0) {
-  
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
-  
       [array[currentIndex], array[randomIndex]] = [
         array[randomIndex], array[currentIndex]];
     }
-  
     return array;
-  }
+}
+
+//HTML escape character decoders for the questions that contain them
+decodeEntities = (() =>{
+    let element = document.createElement('div');
+  
+    decodeHTMLEntities = (str) => {
+      if(str && typeof str === 'string') {
+        str = str.replace(/<script[^>]*>([\S\s]*?)<\/script>/gmi, '');
+        str = str.replace(/<\/?\w(?:[^"'>]|"[^"]*"|'[^']*')*>/gmi, '');
+        element.innerHTML = str;
+        str = element.textContent;
+        element.textContent = '';
+      }
+      return str;
+    }
+
+    return decodeHTMLEntities;
+  })();
 
 const SCORE_POINTS = 100;
 const MAX_QUESTIONS = 10;
@@ -46,12 +60,12 @@ startGame = (data) => {
     score = 0;
     
     availableQuestions = [...data.results];
-    getNewQuestions(data);
+    getNewQuestions();
 }
 
 let choiceArr=[]
 
-getNewQuestions = (data) => {
+getNewQuestions = () => {
     
 
     if(availableQuestions.length ===0 || questionCounter > MAX_QUESTIONS) {
@@ -66,7 +80,7 @@ getNewQuestions = (data) => {
 
     const questionsIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionsIndex];
-    question.innerText = currentQuestion.question;
+    question.innerText = decodeEntities(currentQuestion.question);
 
     //Start API call pulls from current Question
     document.querySelector("#category").innerHTML = `Category: ${currentQuestion.category}`

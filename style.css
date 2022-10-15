@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Math');
 
 
 @media only screen and (max-width: 768px) {
@@ -16,7 +16,7 @@
 
     h1 {
         font-size: 2.4rem;
-        color: #fff;
+        color: #000;
         margin-top: 1rem;
         margin-bottom: 2rem;
     }
@@ -43,7 +43,7 @@
 
     h1 {
         font-size: 5.4rem;
-        color: #fff;
+        color: rgb(0, 0, 0);
         margin-bottom: 5rem;
     }
     
@@ -65,7 +65,7 @@
 }
 
 :root {
-    background-color: rgb(29, 26, 26)
+    background-color: rgb(255, 255, 255)
 }
 
 * {
@@ -73,7 +73,7 @@
     margin: 0;
     padding: 0;
     font-size: 62.5%;
-    font-family: 'Nova Square', cursive;
+    font-family: 'Noto Sans Math', cursive;
 }
 
 
@@ -193,7 +193,7 @@ input::placeholder {
 
 #end-text {
     font-size: 2.4rem;
-    color: #fff;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
