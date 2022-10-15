@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="highscores.css">
+    <script src="https://kit.fontawesome.com/76232890be.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="highScores" class="flex-center flex-column">
+            <h1 id="finalScore">Total Leaderboard</h1>
+            <h1>Quiz 1</h1><ul id="highScoresList"></ul>
+            <h1>Quiz 2</h1><ul id="highScoresList2"></ul>
+            <h1>Random Quiz</h1><ul id="highScoresListAPI"></ul>
+            <a href="index.html" class="btn">Go Home<i class="fas fa-home"></i></a>
+            <a id="red-btn" class="btn" type="submit" onclick="if(confirm('Are you sure you want to reset all your High Scores?')) resetHighScore(event)">Reset High Scores<i class="fa-solid fa-triangle-exclamation"></i></i></a>
+        </div>
+    </div>
+    <script src="1/highscores.js"></script>
+    <script src="2/highscores.js"></script>
+    <script src="Test/highscores.js"></script>
+</body>
+</html>
