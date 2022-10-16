@@ -52,6 +52,11 @@
     }
 }
 
+#my-canvas {
+  position: absolute;
+  pointer-events:none;
+}
+
 .home-container {
     width: 100vw;
     height: 100vh;

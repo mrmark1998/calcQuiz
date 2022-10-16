@@ -9,6 +9,12 @@ const MAX_HIGH_SCORES = 5
 
 finalScore.innerText = mostRecentScore
 
+if(mostRecentScore >= 900) {
+    var newScript = document.createElement('script');
+    newScript.type = 'text/javascript';
+    newScript.src = '../confetti.js';
+    document.getElementsByTagName('head')[0].appendChild(newScript);
+}
 username.addEventListener('keyup', () => {
     saveScoreBtn.disabled = !username.value
 })
