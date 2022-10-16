@@ -13,6 +13,7 @@ resetHighScore = e => {
 
     localStorage.removeItem('highScores')
     localStorage.removeItem('highScores2')
+    localStorage.removeItem('highScores3')
     localStorage.removeItem('highScoresAPI')
     location.reload()
 }

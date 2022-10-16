@@ -1,4 +1,4 @@
-fetch('https://opentdb.com/api.php?amount=10&category=19&difficulty=medium&type=multiple').then((data) => {
+fetch('https://opentdb.com/api.php?amount=50&type=multiple').then((data) => {
     return data.json()
 }).then((completedata) => {
     console.log(completedata)
@@ -58,8 +58,7 @@ const MAX_QUESTIONS = 10;
 startGame = (data) => {
     questionCounter = 0;
     score = 0;
-    
-    availableQuestions = [...data.results];
+    availableQuestions = data.results.slice(0,10);
     getNewQuestions();
 }
 
@@ -99,7 +98,7 @@ getNewQuestions = () => {
 
     choices.forEach(choice => {
         const number = choice.dataset['number']
-        choice.innerText = choiceArr[number-1]
+        choice.innerText = decodeEntities(choiceArr[number-1])
     });
     
     console.log(choiceArr[0])

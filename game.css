@@ -13,13 +13,19 @@ body {
     }
     
     #progressBar {
-        width: 10rem;
+        width: 13rem;
         height: 3rem;
-        border: 0.2rem solid rgb(11, 223, 36);
+        border: 0.2rem solid rgb(40, 160, 224);
         margin-top: 1rem;
-        margin-left: 2.2rem;
-        border-radius: 50px;
+        margin-left: 1rem;
+        border-radius: 5px;
         overflow: hidden;
+    }
+    #category {
+        font-size: small;
+    }
+    #difficulty {
+        font-size:small;
     }
 }
 
@@ -33,10 +39,11 @@ body {
 
     #progressBar {
         width: 20rem;
-        height: 3rem;
-        border: 0.2rem solid rgb(11, 223, 36);
+        height: 4rem;
+        border: 0.2rem solid rgb(40, 160, 224);
         margin-top: 2rem;
-        border-radius: 50px;
+        margin-left: .6rem;
+        border-radius: 6px;
         overflow: hidden;
     }
 
@@ -57,8 +64,6 @@ body {
     font-size: 3rem;
     min-width: 80rem;
 }
-
-
 
 .choice-prefix {
     padding: 2rem 2.5rem;
@@ -97,7 +102,7 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: rgb(11, 223, 36);
+    background: rgb(224, 206, 40);
     width: 0%;
 }
 
