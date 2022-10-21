@@ -53,8 +53,9 @@
 }
 
 #my-canvas {
-  position: absolute;
+  position:absolute;
   pointer-events:none;
+  overflow: hidden;
 }
 
 .home-container {
@@ -224,6 +225,21 @@ input::placeholder {
     margin-left: 1rem;
     font-size: 2rem;
     color: rgb(28, 26, 26);
+}
+
+#finalScore {
+    text-align: center;
+}
+
+#anime-box {
+    display: flex;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+#anime-image {
+    width: 100%;
+    width: 450px;
 }
 
 .footnote {
