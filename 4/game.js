@@ -53,7 +53,7 @@ let questions = [
     },
     { //5
         question: 'For a rock blasted up by dynamite (as in the picture), how do you find the highest point?',
-        choice1: 'Set accerlation = 0',
+        choice1: 'Set accelation = 0',
         choice2: 'Set speed = 0',
         choice3: 'Set position = 0',
         choice4: 'Set velocity = 0',
