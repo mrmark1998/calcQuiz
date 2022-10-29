@@ -61,7 +61,7 @@ let questions = [
         image: '4.png',
     },
     { //6
-        question: "If the equation for a rock thrown up from the moon's position is: s = 24t - 0.8t^2, how high does it go?",
+        question: "If the equation for a rock thrown up from the moon is: s = 24t - 0.8t^2, how high does it go?",
         choice1: '30m',
         choice2: '15m',
         choice3: '180m',
